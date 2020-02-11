@@ -10,7 +10,7 @@
         <!--목록-->
         <scene sceneID="7qi-yg-8da">
             <objects>
-                <tableViewController id="ahz-MY-aKf" userLabel="목록" customClass="MemoListVC" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ahz-MY-aKf" userLabel="목록" customClass="MemoListVC" customModule="페이퍼_잇" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IHH-Sd-ELl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -18,10 +18,20 @@
                         <view key="tableFooterView" contentMode="scaleToFill" id="Xul-vM-xfM">
                             <rect key="frame" x="0.0" y="216" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5GE-lT-Lfl" customClass="CSLogButton" customModule="페이퍼_잇" customModuleProvider="target">
+                                    <rect key="frame" x="168" y="7" width="39" height="30"/>
+                                    <state key="normal" title="더보기"/>
+                                </button>
+                            </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="5GE-lT-Lfl" firstAttribute="centerX" secondItem="Xul-vM-xfM" secondAttribute="centerX" id="8Cd-dR-pOG"/>
+                                <constraint firstItem="5GE-lT-Lfl" firstAttribute="centerY" secondItem="Xul-vM-xfM" secondAttribute="centerY" id="Jfv-8s-nXp"/>
+                            </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memoCell" rowHeight="80" id="dKi-Ie-vGm" customClass="MemoCell" customModule="MyMemory" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memoCell" rowHeight="80" id="dKi-Ie-vGm" customClass="MemoCell" customModule="페이퍼_잇" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dKi-Ie-vGm" id="838-rU-Zcn">
@@ -75,15 +85,15 @@
                                     <outlet property="subject" destination="FA1-wD-91m" id="pAt-75-Cod"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memoCellWithImage" rowHeight="80" id="CSK-Po-inc" customClass="MemoCell" customModule="MyMemory" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memoCellWithImage" rowHeight="80" id="CSK-Po-inc" customClass="MemoCell" customModule="페이퍼_잇" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="108" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CSK-Po-inc" id="dU1-jJ-2Tq">
                                     <rect key="frame" x="0.0" y="0.0" width="348" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4eL-zo-9ZT">
-                                            <rect key="frame" x="17" y="11" width="58" height="58"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4eL-zo-9ZT">
+                                            <rect key="frame" x="16" y="11" width="58" height="58"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="4eL-zo-9ZT" secondAttribute="height" multiplier="1:1" id="Hy7-na-wDX"/>
                                             </constraints>
@@ -170,7 +180,7 @@
         <!--상세 화면-->
         <scene sceneID="D10-0o-1JD">
             <objects>
-                <viewController storyboardIdentifier="MemoRead" title="상세 화면" id="0TW-QH-gIN" userLabel="상세 화면" customClass="MemoReadVC" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemoRead" title="상세 화면" id="0TW-QH-gIN" userLabel="상세 화면" customClass="MemoReadVC" customModule="페이퍼_잇" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zWf-hU-eEG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -228,14 +238,13 @@
         <!--메모 작성-->
         <scene sceneID="qxB-BX-o2t">
             <objects>
-                <viewController title="메모 작성" id="lfu-3b-R8M" userLabel="메모 작성" customClass="MemoFormVC" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="메모 작성" id="lfu-3b-R8M" userLabel="메모 작성" customClass="MemoFormVC" customModule="페이퍼_잇" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Wy-aT-iOx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9yN-B2-X8q">
                                 <rect key="frame" x="0.0" y="44" width="375" height="250"/>
-                                <color key="backgroundColor" red="0.77486244647518165" green="0.97035717934891086" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="Wk3-2W-w36"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="kAc-dP-gm3"/>
