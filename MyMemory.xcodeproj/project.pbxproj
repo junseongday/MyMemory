@@ -60,7 +60,6 @@
 		5B65220823B4FF10001D0F2D = {
 			isa = PBXGroup;
 			children = (
-				5BA9206223F2F3F700441CB1 /* CSLogButton.swift */,
 				5BF3983523B75931009AE4C0 /* Resources */,
 				5B65221323B4FF10001D0F2D /* MyMemory */,
 				5B65221223B4FF10001D0F2D /* Products */,
@@ -78,6 +77,7 @@
 		5B65221323B4FF10001D0F2D /* MyMemory */ = {
 			isa = PBXGroup;
 			children = (
+				5BA9206223F2F3F700441CB1 /* CSLogButton.swift */,
 				5B65221423B4FF10001D0F2D /* AppDelegate.swift */,
 				5B65221623B4FF10001D0F2D /* SceneDelegate.swift */,
 				5B65221A23B4FF10001D0F2D /* Main.storyboard */,
