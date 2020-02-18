@@ -12,6 +12,18 @@ class MemoListVC: UITableViewController {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var impParam = MemoData()
     
+    override func viewDidLoad() {
+        if let revealVC = self.revealViewController() {
+            let btn = UIBarButtonItem()
+            btn.image = UIImage(named: "sidemenu.png")
+            btn.target = revealVC
+            btn.action = #selector(revealVC.revealToggle(_:))
+            
+            self.navigationItem.leftBarButtonItem = btn
+            self.view.addGestureRecognizer(revealVC.panGestureRecognizer())
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let count = self.appDelegate.memoList.count
         return count
