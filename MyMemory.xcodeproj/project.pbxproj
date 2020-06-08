@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B3E438F248E6BF800C74E34 /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E438E248E6BF800C74E34 /* UserInfoManager.swift */; };
 		5B47900223FAF77600DFF64E /* icon04.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B478FF923FAF77600DFF64E /* icon04.png */; };
 		5B47900323FAF77600DFF64E /* icon05.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B478FFA23FAF77600DFF64E /* icon05.png */; };
 		5B47900423FAF77600DFF64E /* icon02.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B478FFB23FAF77600DFF64E /* icon02.png */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B3E438E248E6BF800C74E34 /* UserInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
 		5B478FF923FAF77600DFF64E /* icon04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon04.png; sourceTree = "<group>"; };
 		5B478FFA23FAF77600DFF64E /* icon05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon05.png; sourceTree = "<group>"; };
 		5B478FFB23FAF77600DFF64E /* icon02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon02.png; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				5B47900B23FAF78300DFF64E /* SideBarVC.swift */,
 				5B671A8B23FC24B4007E9D8E /* ProfileVC.swift */,
 				5B47900D23FC177700DFF64E /* MyMemory-Bridging-Header.h */,
+				5B3E438E248E6BF800C74E34 /* UserInfoManager.swift */,
 			);
 			path = MyMemory;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				5BB225AD23B5668E00A6EF83 /* MemoReadVC.swift in Sources */,
 				5B65221523B4FF10001D0F2D /* AppDelegate.swift in Sources */,
 				5B47901023FC177800DFF64E /* SWRevealViewController.m in Sources */,
+				5B3E438F248E6BF800C74E34 /* UserInfoManager.swift in Sources */,
 				5BB225A923B5661400A6EF83 /* MemoListVC.swift in Sources */,
 				5B65221723B4FF10001D0F2D /* SceneDelegate.swift in Sources */,
 			);
@@ -393,7 +397,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kakao.MyMemory;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kakao.MyMemoryJS;
 				PRODUCT_NAME = "페이퍼-잇";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyMemory/MyMemory-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -407,6 +411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DAH3QXS8T7;
 				INFOPLIST_FILE = MyMemory/Info.plist;
@@ -414,8 +419,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kakao.MyMemory;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kakao.MyMemoryJS;
 				PRODUCT_NAME = "페이퍼-잇";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyMemory/MyMemory-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
