@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0DBBC92490B657008C4381 /* TutorialMasterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0DBBC82490B657008C4381 /* TutorialMasterVC.swift */; };
 		5B3E438F248E6BF800C74E34 /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E438E248E6BF800C74E34 /* UserInfoManager.swift */; };
+		5B3E43912490AA3000C74E34 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3E43902490AA3000C74E34 /* Tutorial.storyboard */; };
+		5B3E43932490B1AF00C74E34 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E43922490B1AF00C74E34 /* Utils.swift */; };
+		5B3E43952490B34700C74E34 /* TutorialContentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E43942490B34700C74E34 /* TutorialContentsVC.swift */; };
 		5B47900223FAF77600DFF64E /* icon04.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B478FF923FAF77600DFF64E /* icon04.png */; };
 		5B47900323FAF77600DFF64E /* icon05.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B478FFA23FAF77600DFF64E /* icon05.png */; };
 		5B47900423FAF77600DFF64E /* icon02.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B478FFB23FAF77600DFF64E /* icon02.png */; };
@@ -39,7 +43,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B0DBBC82490B657008C4381 /* TutorialMasterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialMasterVC.swift; sourceTree = "<group>"; };
 		5B3E438E248E6BF800C74E34 /* UserInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
+		5B3E43902490AA3000C74E34 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
+		5B3E43922490B1AF00C74E34 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		5B3E43942490B34700C74E34 /* TutorialContentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialContentsVC.swift; sourceTree = "<group>"; };
 		5B478FF923FAF77600DFF64E /* icon04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon04.png; sourceTree = "<group>"; };
 		5B478FFA23FAF77600DFF64E /* icon05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon05.png; sourceTree = "<group>"; };
 		5B478FFB23FAF77600DFF64E /* icon02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon02.png; sourceTree = "<group>"; };
@@ -85,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B3E43962490B42300C74E34 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				5B3E43942490B34700C74E34 /* TutorialContentsVC.swift */,
+				5B0DBBC82490B657008C4381 /* TutorialMasterVC.swift */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
 		5B65220823B4FF10001D0F2D = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +122,7 @@
 		5B65221323B4FF10001D0F2D /* MyMemory */ = {
 			isa = PBXGroup;
 			children = (
+				5B3E43962490B42300C74E34 /* Tutorial */,
 				5B47900E23FC177800DFF64E /* SWRevealViewController.h */,
 				5B47900F23FC177800DFF64E /* SWRevealViewController.m */,
 				5BA9206223F2F3F700441CB1 /* CSLogButton.swift */,
@@ -124,6 +142,8 @@
 				5B671A8B23FC24B4007E9D8E /* ProfileVC.swift */,
 				5B47900D23FC177700DFF64E /* MyMemory-Bridging-Header.h */,
 				5B3E438E248E6BF800C74E34 /* UserInfoManager.swift */,
+				5B3E43902490AA3000C74E34 /* Tutorial.storyboard */,
+				5B3E43922490B1AF00C74E34 /* Utils.swift */,
 			);
 			path = MyMemory;
 			sourceTree = "<group>";
@@ -218,6 +238,7 @@
 				5B65222123B4FF11001D0F2D /* Assets.xcassets in Resources */,
 				5B47900A23FAF77600DFF64E /* icon03.png in Resources */,
 				5BF399FB23B75B09009AE4C0 /* fountainpen@2x.png in Resources */,
+				5B3E43912490AA3000C74E34 /* Tutorial.storyboard in Resources */,
 				5BA9222523F2FA0200441CB1 /* memo-background@2x.png in Resources */,
 				5B65221C23B4FF10001D0F2D /* Main.storyboard in Resources */,
 				5BA9222723F3014700441CB1 /* warning-icon-60@2x.png in Resources */,
@@ -236,15 +257,18 @@
 				5B671A8C23FC24B4007E9D8E /* ProfileVC.swift in Sources */,
 				5BA9206323F2F3F700441CB1 /* CSLogButton.swift in Sources */,
 				5BB225AF23B566F500A6EF83 /* MemoCell.swift in Sources */,
+				5B3E43932490B1AF00C74E34 /* Utils.swift in Sources */,
 				5BF3983423B7043E009AE4C0 /* MemoData.swift in Sources */,
 				5B65221F23B4FF10001D0F2D /* MyMemory.xcdatamodeld in Sources */,
 				5BB225AB23B5664E00A6EF83 /* MemoFormVC.swift in Sources */,
 				5B47900C23FAF78300DFF64E /* SideBarVC.swift in Sources */,
 				5BB225AD23B5668E00A6EF83 /* MemoReadVC.swift in Sources */,
 				5B65221523B4FF10001D0F2D /* AppDelegate.swift in Sources */,
+				5B0DBBC92490B657008C4381 /* TutorialMasterVC.swift in Sources */,
 				5B47901023FC177800DFF64E /* SWRevealViewController.m in Sources */,
 				5B3E438F248E6BF800C74E34 /* UserInfoManager.swift in Sources */,
 				5BB225A923B5661400A6EF83 /* MemoListVC.swift in Sources */,
+				5B3E43952490B34700C74E34 /* TutorialContentsVC.swift in Sources */,
 				5B65221723B4FF10001D0F2D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

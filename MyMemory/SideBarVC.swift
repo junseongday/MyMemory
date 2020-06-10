@@ -21,6 +21,7 @@ class SideBarVC: UITableViewController {
     let nameLabel = UILabel()
     let emailLabel = UILabel()
     let profileImage = UIImageView()
+    let uinfo = UserInfoManager()
     
     override func viewDidLoad() {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 70))
@@ -28,21 +29,17 @@ class SideBarVC: UITableViewController {
         self.tableView.tableHeaderView = headerView
         
         self.nameLabel.frame = CGRect(x: 70, y: 15, width: 100, height: 30)
-        self.nameLabel.text = "꼼꼼한 준성 씨"
         self.nameLabel.textColor = UIColor.white
         self.nameLabel.backgroundColor = UIColor.clear
         self.nameLabel.font = UIFont.boldSystemFont(ofSize: 15)
         headerView.addSubview(self.nameLabel)
         
         self.emailLabel.frame = CGRect(x: 70, y: 30, width: 200, height: 30)
-        self.emailLabel.text = "junseongday@gmail.com"
         self.emailLabel.textColor = UIColor.white
         self.emailLabel.backgroundColor = UIColor.clear
         self.emailLabel.font = UIFont.systemFont(ofSize: 10)
         headerView.addSubview(self.emailLabel)
         
-        let defaultProfile = UIImage(named: "account.jpg")
-        self.profileImage.image = defaultProfile
         self.profileImage.frame = CGRect(x: 10, y: 10, width: 50, height: 50)
         self.profileImage.layer.cornerRadius = (self.profileImage.frame.width / 2)
         self.profileImage.layer.borderWidth = 0
@@ -79,5 +76,11 @@ class SideBarVC: UITableViewController {
                 self.revealViewController()?.revealToggle(self)
             }
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.nameLabel.text = self.uinfo.name ?? "Guest"
+        self.emailLabel.text = self.uinfo.account ?? ""
+        self.profileImage.image = self.uinfo.profile
     }
 }

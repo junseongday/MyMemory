@@ -45,6 +45,10 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
         self.view.addSubview(self.tv)
         self.navigationController?.navigationBar.isHidden = true
         self.drawBtn()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(profile(_:)))
+        self.profileImage.addGestureRecognizer(tap)
+        self.profileImage.isUserInteractionEnabled = true
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -145,5 +149,47 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource, U
             btn.addTarget(self, action: #selector(doLogin(_:)), for: .touchUpInside)
         }
         v.addSubview(btn)
+    }
+    
+    func imgPicker(_ source: UIImagePickerController.SourceType) {
+        let picker = UIImagePickerController()
+        picker.sourceType = source
+        picker.delegate = self
+        picker.allowsEditing = true
+        self.present(picker, animated: true)
+    }
+    
+    @objc func profile(_ sender: UIButton) {
+        guard self.uinfo.account != nil else {
+            self.doLogin(self)
+            return
+        }
+        
+        let alert = UIAlertController(title: nil, message: "사진을 가져올 곳을 선택해 주세요", preferredStyle: .alert)
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            alert.addAction(UIAlertAction(title: "카메라", style: .default) {(_) in
+                self.imgPicker(.camera)
+            })
+        }
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
+            alert.addAction(UIAlertAction(title: "저장된 앨범", style: .default) {(_) in
+                self.imgPicker(.savedPhotosAlbum)
+            })
+        }
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            alert.addAction(UIAlertAction(title: "포토 라이브러리", style: .default) {(_) in
+                self.imgPicker(.photoLibrary)
+            })
+        }
+        alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let img = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            self.uinfo.profile = img
+            self.profileImage.image = img
+        }
+        picker.dismiss(animated: true, completion: nil)
     }
 }
